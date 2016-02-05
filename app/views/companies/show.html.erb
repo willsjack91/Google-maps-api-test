@@ -1,19 +1,27 @@
+<% @company.each do |company| %>
+
 <h1>
-  <%= @company.name %>
+  <%= company.name %>
 </h1>
 <p>
+	ID:
+	<%= company.id %>
+</p>
+<p>
   lat:
-  <%= @company.lat %>
+  <%= company.lat %>
 </p>
 <p>
   lng:
-  <%= @company.lng %>
+  <%= company.lng %>
 </p>
+
+<% end %>
 <!-- map div
 -->
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
+<div style='width: 75%;'>
+  <div id="map" style='width: 100%; height: 500px;'></div>
 </div>
 
 <script>

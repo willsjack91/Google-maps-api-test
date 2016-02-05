@@ -3,8 +3,14 @@ class CompaniesController < ApplicationController
   end
 
   def show
-  	    @company = Company.find(2)
-  	   
+  	    @company = Company.all()
+
+  	    # markers = []
+  	    # Company.all.each do |company|
+
+  	    # 	markers << 
+  	    # end
+
 
   	    @hash = Gmaps4rails.build_markers(@company) do |comp, marker|
   		marker.lat comp.lat
